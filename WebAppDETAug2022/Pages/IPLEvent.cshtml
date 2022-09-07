@@ -1,0 +1,28 @@
+﻿@page
+@using WebAppDETAug2022.Models
+@model WebAppDETAug2022.Pages.IPLEventModel
+@{
+}
+
+
+<h1>Welcome to IPLEvent 2023 </h1>
+
+<h3>Ticket Details  </h3>
+<table border=1px solid black;
+	   border-radius= 10px >
+	<tr>
+		
+		<th>Category</th>
+		<th>Price</th>
+		<th>MaxLimit</th>
+	</tr>
+	@foreach (Ticket t in Model.Tickets)
+	{
+		<tr>
+			<td>@t.Category</td>
+			<td>@t.Price</td>
+			<td>@t.MaxLimit</td>
+		</tr>
+	}
+</table>
+@*border="1"*@s
