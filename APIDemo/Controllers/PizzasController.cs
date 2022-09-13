@@ -12,55 +12,55 @@ namespace APIDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TicketsController : ControllerBase
+    public class PizzasController : ControllerBase
     {
         private readonly APIDemoContext _context;
 
-        public TicketsController(APIDemoContext context)
+        public PizzasController(APIDemoContext context)
         {
             _context = context;
         }
 
-        // GET: api/Tickets
+        // GET: api/Pizzas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Ticket>>> GetTicket()
+        public async Task<ActionResult<IEnumerable<Pizza>>> GetPizza()
         {
-          if (_context.Ticket == null)
+          if (_context.Pizza == null)
           {
               return NotFound();
           }
-            return await _context.Ticket.ToListAsync();
+            return await _context.Pizza.ToListAsync();
         }
 
-        // GET: api/Tickets/5
+        // GET: api/Pizzas/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Ticket>> GetTicket(int id)
+        public async Task<ActionResult<Pizza>> GetPizza(int id)
         {
-          if (_context.Ticket == null)
+          if (_context.Pizza == null)
           {
               return NotFound();
           }
-            var ticket = await _context.Ticket.FindAsync(id);
+            var pizza = await _context.Pizza.FindAsync(id);
 
-            if (ticket == null)
+            if (pizza == null)
             {
                 return NotFound();
             }
 
-            return ticket;
+            return pizza;
         }
 
-        // PUT: api/Tickets/5
+        // PUT: api/Pizzas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTicket(int id, Ticket ticket)
+        public async Task<IActionResult> PutPizza(int id, Pizza pizza)
         {
-            if (id != ticket.ID)
+            if (id != pizza.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(ticket).State = EntityState.Modified;
+            _context.Entry(pizza).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace APIDemo.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TicketExists(id))
+                if (!PizzaExists(id))
                 {
                     return NotFound();
                 }
@@ -81,44 +81,44 @@ namespace APIDemo.Controllers
             return NoContent();
         }
 
-        // POST: api/Tickets
+        // POST: api/Pizzas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Ticket>> PostTicket(Ticket ticket)
+        public async Task<ActionResult<Pizza>> PostPizza(Pizza pizza)
         {
-          if (_context.Ticket == null)
+          if (_context.Pizza == null)
           {
-              return Problem("Entity set 'APIDemoContext.Ticket'  is null.");
+              return Problem("Entity set 'APIDemoContext.Pizza'  is null.");
           }
-            _context.Ticket.Add(ticket);
+            _context.Pizza.Add(pizza);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTicket", new { id = ticket.ID }, ticket);
+            return CreatedAtAction("GetPizza", new { id = pizza.Id }, pizza);
         }
 
-        // DELETE: api/Tickets/5
+        // DELETE: api/Pizzas/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTicket(int id)
+        public async Task<IActionResult> DeletePizza(int id)
         {
-            if (_context.Ticket == null)
+            if (_context.Pizza == null)
             {
                 return NotFound();
             }
-            var ticket = await _context.Ticket.FindAsync(id);
-            if (ticket == null)
+            var pizza = await _context.Pizza.FindAsync(id);
+            if (pizza == null)
             {
                 return NotFound();
             }
 
-            _context.Ticket.Remove(ticket);
+            _context.Pizza.Remove(pizza);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool TicketExists(int id)
+        private bool PizzaExists(int id)
         {
-            return (_context.Ticket?.Any(e => e.ID == id)).GetValueOrDefault();
+            return (_context.Pizza?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

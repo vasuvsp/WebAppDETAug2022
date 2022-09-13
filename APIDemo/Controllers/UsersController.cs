@@ -12,55 +12,55 @@ namespace APIDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TicketsController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly APIDemoContext _context;
 
-        public TicketsController(APIDemoContext context)
+        public UsersController(APIDemoContext context)
         {
             _context = context;
         }
 
-        // GET: api/Tickets
+        // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Ticket>>> GetTicket()
+        public async Task<ActionResult<IEnumerable<User>>> GetUser()
         {
-          if (_context.Ticket == null)
+          if (_context.User == null)
           {
               return NotFound();
           }
-            return await _context.Ticket.ToListAsync();
+            return await _context.User.ToListAsync();
         }
 
-        // GET: api/Tickets/5
+        // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Ticket>> GetTicket(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-          if (_context.Ticket == null)
+          if (_context.User == null)
           {
               return NotFound();
           }
-            var ticket = await _context.Ticket.FindAsync(id);
+            var user = await _context.User.FindAsync(id);
 
-            if (ticket == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return ticket;
+            return user;
         }
 
-        // PUT: api/Tickets/5
+        // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTicket(int id, Ticket ticket)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != ticket.ID)
+            if (id != user.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(ticket).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace APIDemo.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TicketExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -81,44 +81,44 @@ namespace APIDemo.Controllers
             return NoContent();
         }
 
-        // POST: api/Tickets
+        // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Ticket>> PostTicket(Ticket ticket)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-          if (_context.Ticket == null)
+          if (_context.User == null)
           {
-              return Problem("Entity set 'APIDemoContext.Ticket'  is null.");
+              return Problem("Entity set 'APIDemoContext.User'  is null.");
           }
-            _context.Ticket.Add(ticket);
+            _context.User.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTicket", new { id = ticket.ID }, ticket);
+            return CreatedAtAction("GetUser", new { id = user.Id }, user);
         }
 
-        // DELETE: api/Tickets/5
+        // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTicket(int id)
+        public async Task<IActionResult> DeleteUser(int id)
         {
-            if (_context.Ticket == null)
+            if (_context.User == null)
             {
                 return NotFound();
             }
-            var ticket = await _context.Ticket.FindAsync(id);
-            if (ticket == null)
+            var user = await _context.User.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Ticket.Remove(ticket);
+            _context.User.Remove(user);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool TicketExists(int id)
+        private bool UserExists(int id)
         {
-            return (_context.Ticket?.Any(e => e.ID == id)).GetValueOrDefault();
+            return (_context.User?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
