@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCDemo", "MVCDemo\MVCDemo.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIDemo", "APIDemo\APIDemo.csproj", "{3F30BBE8-420F-4788-813A-2DDBF22F4936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "TodoApi\TodoApi.csproj", "{523059E6-17AD-48DA-9ADC-659A38D943FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "TodoApi\TodoApi.csproj", "{523059E6-17AD-48DA-9ADC-659A38D943FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OData6Demo.Api", "..\..\..\Downloads\OData6Demo-master\OData6Demo-master\OData6Demo.Api\OData6Demo.Api.csproj", "{7758E725-EC27-47C0-9047-9B8A9EF42F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{EADD2E26-1ACD-4A3C-BCF9-B41141274DB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTests", "BankTests\BankTests.csproj", "{0EE9F765-51D9-48E9-AD3F-C8ECCDDB1BDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{523059E6-17AD-48DA-9ADC-659A38D943FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{523059E6-17AD-48DA-9ADC-659A38D943FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{523059E6-17AD-48DA-9ADC-659A38D943FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7758E725-EC27-47C0-9047-9B8A9EF42F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7758E725-EC27-47C0-9047-9B8A9EF42F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7758E725-EC27-47C0-9047-9B8A9EF42F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7758E725-EC27-47C0-9047-9B8A9EF42F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EADD2E26-1ACD-4A3C-BCF9-B41141274DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADD2E26-1ACD-4A3C-BCF9-B41141274DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADD2E26-1ACD-4A3C-BCF9-B41141274DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADD2E26-1ACD-4A3C-BCF9-B41141274DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE9F765-51D9-48E9-AD3F-C8ECCDDB1BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE9F765-51D9-48E9-AD3F-C8ECCDDB1BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE9F765-51D9-48E9-AD3F-C8ECCDDB1BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE9F765-51D9-48E9-AD3F-C8ECCDDB1BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
