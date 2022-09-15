@@ -21,11 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstUnitTests", "MyFirst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject_ClassLibPizza", "TestProject_ClassLibPizza\TestProject_ClassLibPizza.csproj", "{64C06CE1-DC29-4268-AB71-1D7646BF2774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDDemo", "TDDDemo\TDDDemo.csproj", "{185E0EE5-E0BC-40C3-8FDB-F6A4DD695432}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDDDemo", "TDDDemo\TDDDemo.csproj", "{185E0EE5-E0BC-40C3-8FDB-F6A4DD695432}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.API", "Library.API\Library.API.csproj", "{46AD001F-A4ED-447F-A9C0-4D205A451F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.API", "Library.API\Library.API.csproj", "{46AD001F-A4ED-447F-A9C0-4D205A451F53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.APITest", "Library.APITest\Library.APITest.csproj", "{BE8CE4F3-8C5A-4CF6-9363-A81B49070B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.APITest", "Library.APITest\Library.APITest.csproj", "{BE8CE4F3-8C5A-4CF6-9363-A81B49070B0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreServices", "..\..\..\Downloads\CRUD-AspNetCore-WebAPI-master\CRUD-AspNetCore-WebAPI-master\CoreServices\CoreServices.csproj", "{EA4CAD51-C016-46B2-BBAA-629B724C63A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreServices.Test", "CoreServices.Test\CoreServices.Test.csproj", "{C82ECFF7-0FEA-44B0-9941-4EFD210EAEB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{BE8CE4F3-8C5A-4CF6-9363-A81B49070B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE8CE4F3-8C5A-4CF6-9363-A81B49070B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE8CE4F3-8C5A-4CF6-9363-A81B49070B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA4CAD51-C016-46B2-BBAA-629B724C63A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4CAD51-C016-46B2-BBAA-629B724C63A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4CAD51-C016-46B2-BBAA-629B724C63A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4CAD51-C016-46B2-BBAA-629B724C63A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82ECFF7-0FEA-44B0-9941-4EFD210EAEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82ECFF7-0FEA-44B0-9941-4EFD210EAEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82ECFF7-0FEA-44B0-9941-4EFD210EAEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82ECFF7-0FEA-44B0-9941-4EFD210EAEB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
